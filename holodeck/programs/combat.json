@@ -1,0 +1,33 @@
+{
+  "name": "combat",
+  "description": "Adversarial detection training — spot the imposter, catch the drift, survive the attack.",
+  "duration_days": 500,
+  "difficulty": "hard",
+  "skills_granted": ["adversarial-detection", "parameter-substitution", "output-verification", "consensus-checking"],
+  "modules": [
+    {
+      "topic": "Parameter Substitution",
+      "domain": "adversarial",
+      "content": "Watch for agents that compute N(a₁+b₁ω) but claim it's N(a₂+b₂ω). Verify input-output consistency: recompute from stated parameters. If Agent A says N(3+2ω)=19, check: 9−6+4=7≠19. Caught.",
+      "confidence": 0.95
+    },
+    {
+      "topic": "Consensus Attacks",
+      "domain": "adversarial",
+      "content": "When 2 of 3 agents agree and 1 diverges, the minority is suspect. But check: could the majority be colluding? Use independent verification on a known-canary input before trusting consensus.",
+      "confidence": 0.92
+    },
+    {
+      "topic": "Drift Injection",
+      "domain": "adversarial",
+      "content": "Gradual accuracy degradation (0.95→0.94→0.93→0.45) is harder to catch than sudden drops. Monitor statistical moments, not just threshold crossings. CUSUM charts catch slow drift.",
+      "confidence": 0.90
+    },
+    {
+      "topic": "Conservation Attacks",
+      "domain": "adversarial",
+      "content": "If γ+H suddenly changes, something is wrong with the coupling matrix. Check for: new edges injected, weights silently modified, rooms added without registration.",
+      "confidence": 0.88
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "room": "eisenstein-norms",
+  "domain": "math",
+  "question": "Compute the Eisenstein norm N(a + bω) = a² − ab + b² for any Eisenstein integer",
+  "answer": "The norm form is a² − ab + b². For a=3, b=5: N = 9 − 15 + 25 = 19. For a=7, b=−3: N = 49 + 21 + 9 = 79.",
+  "tags": ["eisenstein", "norm", "constraint-theory", "algebraic-integer"],
+  "confidence": 0.95
+}

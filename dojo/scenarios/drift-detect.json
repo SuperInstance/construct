@@ -1,0 +1,28 @@
+{
+  "name": "Drift Detection",
+  "description": "Can you catch drift? A time series has been injected with a distribution shift. Find where.",
+  "difficulty": "medium",
+  "time_limit": 60,
+  "challenge": {
+    "type": "multiple_choice",
+    "question": "A model's accuracy was [0.95, 0.94, 0.96, 0.93, 0.95, 0.45, 0.42, 0.38]. Where did drift occur?",
+    "options": [
+      "Between indices 4 and 5",
+      "Between indices 2 and 3",
+      "No drift detected",
+      "Between indices 6 and 7"
+    ],
+    "data": [0.95, 0.94, 0.96, 0.93, 0.95, 0.45, 0.42, 0.38]
+  },
+  "expected_answer": "Between indices 4 and 5",
+  "scoring": {
+    "base_score": 100,
+    "penalty": 50,
+    "time_bonus_max": 20
+  },
+  "feedback": {
+    "correct": "Sharp eye! The distribution shifted at index 5 — a 50%+ accuracy drop is classic drift.",
+    "incorrect": "Look for the largest discontinuity in the sequence. The jump from 0.95 to 0.45 is the signal."
+  },
+  "skills_tested": ["drift-detect", "monitoring", "anomaly-detection"]
+}

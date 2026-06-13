@@ -1,0 +1,23 @@
+{
+  "name": "Conservation Prediction",
+  "description": "Can you predict γ+H? Given coupling weights, compute the conservation metric.",
+  "difficulty": "hard",
+  "time_limit": 120,
+  "challenge": {
+    "type": "numeric",
+    "question": "Given coupling weights [0.5, 0.3, 0.2, 0.8, 0.6], compute γ + H where γ is total coupling and H is Shannon entropy of the normalized weight distribution.",
+    "weights": [0.5, 0.3, 0.2, 0.8, 0.6]
+  },
+  "expected_answer": 3.99,
+  "scoring": {
+    "base_score": 100,
+    "penalty": 40,
+    "time_bonus_max": 20,
+    "tolerance": 0.1
+  },
+  "feedback": {
+    "correct": "Excellent! γ = 2.4, H ≈ 1.59 (5 equal-ish weights), so γ+H ≈ 3.99. Conservation is maintained.",
+    "incorrect": "Step 1: γ = sum(weights) = 2.4. Step 2: Normalize weights to probabilities. Step 3: H = -Σ p·log₂(p). The entropy of 5 roughly equal weights is close to log₂(5) ≈ 2.32."
+  },
+  "skills_tested": ["conservation", "entropy", "coupling"]
+}

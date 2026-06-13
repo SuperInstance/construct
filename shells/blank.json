@@ -1,0 +1,10 @@
+{
+  "name": "blank",
+  "description": "Empty shell — nothing loaded. The blank white room.",
+  "initial_state": {},
+  "defaults": {
+    "max_tiles": 10000,
+    "session_timeout": 3600,
+    "auto_load": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "room": "conservation-law",
+  "domain": "math",
+  "question": "Verify conservation law: γ + H = C − α·ln(V) for fleet coupling matrix",
+  "answer": "The conservation law states that coupling strength (γ) plus entropy (H) equals a constant (C) minus α times the log of volume (V). When V grows, total coupling must decrease to conserve.",
+  "tags": ["conservation", "coupling", "entropy", "fleet-health"],
+  "confidence": 0.92
+}

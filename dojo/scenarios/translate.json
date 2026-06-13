@@ -1,0 +1,27 @@
+{
+  "name": "Vocabulary Wall Routing",
+  "description": "Can you route the vocabulary wall? A query hits domain terminology. Route it correctly.",
+  "difficulty": "medium",
+  "time_limit": 60,
+  "challenge": {
+    "type": "multiple_choice",
+    "question": "A Tier 3 model receives: 'Compute the Eisenstein norm of a=5, b=-3'. The model responds 'I cannot compute this.' What tier should this be routed to?",
+    "options": [
+      "Tier 1 (direct) — Seed-mini can compute a² − ab + b² directly",
+      "Tier 2 (scaffolded) — Add activation key 'Eisenstein norm' and retry",
+      "Keep at Tier 3 — The model just needs a better prompt",
+      "Discard the query — It's too specialized"
+    ]
+  },
+  "expected_answer": "Tier 1 (direct) — Seed-mini can compute a² − ab + b² directly",
+  "scoring": {
+    "base_score": 100,
+    "penalty": 50,
+    "time_bonus_max": 20
+  },
+  "feedback": {
+    "correct": "Correct! The vocabulary wall blocks the model, but the computation (25 + 15 + 9 = 49) is trivial arithmetic. Route to Seed-mini as Tier 1.",
+    "incorrect": "The key insight: the model CAN compute this — it just doesn't understand 'Eisenstein norm'. Translate to 'compute a² − ab + b²' and route to Seed-mini (Tier 1)."
+  },
+  "skills_tested": ["translation", "tier-routing", "vocabulary-wall"]
+}

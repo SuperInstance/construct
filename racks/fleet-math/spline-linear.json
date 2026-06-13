@@ -1,0 +1,8 @@
+{
+  "room": "spline-linear",
+  "domain": "math",
+  "question": "Compress neural network weights using SplineLinear (Eisenstein lattice parameterization)",
+  "answer": "SplineLinear replaces dense weight matrices with Eisenstein lattice weights. 20× compression on drift-detect task at same accuracy. Sub-millisecond inference on CPU targets.",
+  "tags": ["spline", "compression", "eisenstein", "tensor-spline"],
+  "confidence": 0.88
+}

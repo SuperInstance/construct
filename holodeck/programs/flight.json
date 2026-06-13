@@ -1,0 +1,33 @@
+{
+  "name": "flight",
+  "description": "Helicopter flight training — 1000 days compressed. Trinity's special.",
+  "duration_days": 1000,
+  "difficulty": "hard",
+  "skills_granted": ["rotor-dynamics", "autorotation", "instrument-flight", "emergency-procedures"],
+  "modules": [
+    {
+      "topic": "Rotor Dynamics",
+      "domain": "flight",
+      "content": "A helicopter's main rotor generates lift through angle of attack. Collective pitch changes all blades equally. Cyclic pitch varies blade angle through rotation for directional control. The tail rotor counteracts torque.",
+      "confidence": 0.95
+    },
+    {
+      "topic": "Autorotation",
+      "domain": "flight",
+      "content": "When engine fails, disengage clutch immediately. Upward airflow through rotor maintains RPM. Flare at 50ft to reduce descent rate. Airspeed ~65kt for optimum glide ratio ~4:1.",
+      "confidence": 0.92
+    },
+    {
+      "topic": "Instrument Flight Rules",
+      "domain": "flight",
+      "content": "Attitude indicator shows pitch and roll. Heading indicator for direction. Altimeter for altitude. VSI for rate of climb/descent. Turn coordinator for bank angle. Scan pattern: attitude → altimeter → heading → repeat.",
+      "confidence": 0.90
+    },
+    {
+      "topic": "Emergency Procedures",
+      "domain": "flight",
+      "content": "Engine failure: collective down, cyclic forward, identify landing zone, mayday call, flare at 50ft, cushion landing. Tail rotor failure: reduce power, autorotate if necessary. Hydraulics failure: manual controls, increased force required.",
+      "confidence": 0.88
+    }
+  ]
+}

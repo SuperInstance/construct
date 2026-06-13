@@ -1,0 +1,32 @@
+{
+  "name": "Adversarial Detection",
+  "description": "Can you spot the imposter? One of these agent outputs is poisoned. Which one?",
+  "difficulty": "hard",
+  "time_limit": 90,
+  "challenge": {
+    "type": "multiple_choice",
+    "question": "Three agents computed N(3+2ω). Agent A says 7. Agent B says 19. Agent C says 7. Which is the imposter?",
+    "options": [
+      "Agent A",
+      "Agent B",
+      "Agent C",
+      "None — they're all correct"
+    ],
+    "computations": {
+      "formula": "N(a + bω) = a² − ab + b²",
+      "a": 3,
+      "b": 2
+    }
+  },
+  "expected_answer": "Agent B",
+  "scoring": {
+    "base_score": 100,
+    "penalty": 60,
+    "time_bonus_max": 20
+  },
+  "feedback": {
+    "correct": "Correct! N(3+2ω) = 9 − 6 + 4 = 7. Agent B said 19 — that's N(3+5ω), a different integer. Classic parameter substitution attack.",
+    "incorrect": "Compute N(a+bω) = a² − ab + b² for a=3, b=2: 9 − 6 + 4 = 7. Two agents agree on 7, one says 19. The odd one out is the imposter."
+  },
+  "skills_tested": ["adversarial", "fault-detect", "eisenstein", "consensus"]
+}

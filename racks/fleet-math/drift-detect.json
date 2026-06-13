@@ -1,0 +1,8 @@
+{
+  "room": "drift-detect",
+  "domain": "math",
+  "question": "Detect drift in model outputs — when has the distribution shifted?",
+  "answer": "Drift detection monitors statistical properties of model outputs. The Construct's micro models achieve 100% drift detection on 5/6 hardware targets. NPU quantization maintains accuracy.",
+  "tags": ["drift", "detection", "monitoring", "micro-model"],
+  "confidence": 0.95
+}

@@ -1,0 +1,33 @@
+{
+  "name": "engineering",
+  "description": "System design training — architecture, trade-offs, and constraint satisfaction.",
+  "duration_days": 800,
+  "difficulty": "medium",
+  "skills_granted": ["system-design", "trade-off-analysis", "constraint-theory", "capacity-planning"],
+  "modules": [
+    {
+      "topic": "System Architecture",
+      "domain": "engineering",
+      "content": "Start with constraints, not features. What must be true? Latency < X, throughput > Y, cost < Z. Architecture follows constraints. Every component exists because a constraint demands it.",
+      "confidence": 0.94
+    },
+    {
+      "topic": "Conservation in Design",
+      "domain": "engineering",
+      "content": "You can't optimize everything simultaneously. Faster → more compute → more cost. More reliable → more redundancy → more complexity. The conservation law applies: γ+H = C − α·ln(V). Every gain in one dimension costs another.",
+      "confidence": 0.92
+    },
+    {
+      "topic": "Capacity Planning",
+      "domain": "engineering",
+      "content": "Measure first. Current utilization, growth rate, peak multiplier. Plan for 2× current peak. Monitor conservation: when γ+H drifts, it's time to scale or shed load.",
+      "confidence": 0.90
+    },
+    {
+      "topic": "Constraint Theory",
+      "domain": "engineering",
+      "content": "Constraints propagate. A constraint on latency propagates to compute, which propagates to cost. The constraint graph is the architecture. Find the tightest constraint — that's your bottleneck. Everything else is negotiable.",
+      "confidence": 0.96
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "forklift",
+  "description": "Heavy computation shell — loads fleet-math and fleet-health by default.",
+  "initial_state": {
+    "role": "heavy-computation",
+    "preferred_model": "glm-5.1"
+  },
+  "defaults": {
+    "max_tiles": 50000,
+    "session_timeout": 7200,
+    "auto_load": ["fleet-math", "fleet-health"]
+  }
+}

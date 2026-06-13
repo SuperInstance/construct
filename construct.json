@@ -1,0 +1,76 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8849,
+    "max_sessions": 64,
+    "session_timeout_seconds": 3600
+  },
+  "defaults": {
+    "shell": "blank",
+    "rack_dir": "racks",
+    "skill_dir": "skills",
+    "dojo_dir": "dojo",
+    "holodeck_dir": "holodeck",
+    "shells_dir": "shells"
+  },
+  "rooms": {
+    "construct": {
+      "description": "The blank white room. Infinite space. Cursor blinking.",
+      "default_tiles": []
+    }
+  },
+  "rack_manifest": {
+    "fleet-math": {
+      "description": "Math computation rooms — constraint theory, Eisenstein, conservation",
+      "rooms": ["eisenstein-norms", "conservation-law", "spline-linear", "drift-detect"],
+      "dependencies": []
+    },
+    "fleet-translate": {
+      "description": "Translation rooms — vocabulary wall, tier routing, activation keys",
+      "rooms": ["vocabulary-wall", "tier-router", "fleet-translator"],
+      "dependencies": []
+    },
+    "fleet-health": {
+      "description": "Health monitoring rooms — conservation checks, GL(9), Hebbian coupling",
+      "rooms": ["conservation-monitor", "gl9-holonomy", "hebbian-coupling", "fault-detect"],
+      "dependencies": []
+    },
+    "fleet-reason": {
+      "description": "Reasoning rooms — activation keys, labeled paradox, stage routing",
+      "rooms": ["activation-keys", "labeled-paradox", "stage-router", "expert-daemon"],
+      "dependencies": []
+    },
+    "fleet-comm": {
+      "description": "Communication rooms — I2I protocol, Matrix bridge, PLATO sync",
+      "rooms": ["i2i-protocol", "matrix-bridge", "plato-sync", "cashew-bridge"],
+      "dependencies": []
+    }
+  },
+  "skill_manifest": {
+    "eisenstein": {
+      "description": "Eisenstein integer computation and norm calculation",
+      "file": "eisenstein.py",
+      "provides": ["eisenstein_norm", "eisenstein_multiply", "eisenstein_divide"]
+    },
+    "hebbian": {
+      "description": "Hebbian coupling dynamics and weight update",
+      "file": "hebbian.py",
+      "provides": ["hebbian_update", "coupling_strength", "decay_weights"]
+    },
+    "conservation": {
+      "description": "Conservation law monitoring (γ+H = C − α·ln(V))",
+      "file": "conservation.py",
+      "provides": ["check_conservation", "gamma_coupling", "entropy_H"]
+    },
+    "translation": {
+      "description": "Vocabulary wall translation for fleet models",
+      "file": "translation.py",
+      "provides": ["translate_query", "detect_vocabulary_wall", "route_tier"]
+    },
+    "fault-detect": {
+      "description": "Triple fault detection — GL(9) + Hebbian + conservation",
+      "file": "fault-detect.py",
+      "provides": ["detect_faults", "triple_check", "quarantine"]
+    }
+  }
+}

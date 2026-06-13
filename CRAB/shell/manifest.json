@@ -1,0 +1,11 @@
+{
+  "name": "construct",
+  "family": "service",
+  "version": "0.1.0",
+  "entry": "construct.py",
+  "type": "python",
+  "commands": [
+    "python3 construct.py run",
+    "python3 -m pytest tests/"
+  ]
+}

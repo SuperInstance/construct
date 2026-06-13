@@ -1,0 +1,13 @@
+{
+  "name": "service",
+  "description": "Background daemon shell — runs continuously, monitors fleet health.",
+  "initial_state": {
+    "role": "daemon",
+    "preferred_model": "seed-2.0-mini"
+  },
+  "defaults": {
+    "max_tiles": 100000,
+    "session_timeout": 86400,
+    "auto_load": ["fleet-health", "fleet-comm"]
+  }
+}

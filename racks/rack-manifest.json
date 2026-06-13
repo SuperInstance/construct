@@ -1,0 +1,32 @@
+{
+  "racks": {
+    "fleet-math": {
+      "description": "Math computation rooms — constraint theory, Eisenstein norms, conservation law, drift detection",
+      "rooms": ["eisenstein-norms", "conservation-law", "spline-linear", "drift-detect"],
+      "dependencies": [],
+      "load_order": ["eisenstein-norms", "conservation-law", "drift-detect", "spline-linear"]
+    },
+    "fleet-translate": {
+      "description": "Translation rooms — vocabulary wall detection, tier routing, fleet translator",
+      "rooms": ["vocabulary-wall", "tier-router", "fleet-translator"],
+      "dependencies": [],
+      "load_order": ["fleet-translator", "tier-router", "vocabulary-wall"]
+    },
+    "fleet-health": {
+      "description": "Health monitoring rooms — conservation checks, GL(9) holonomy, Hebbian coupling, fault detection",
+      "rooms": ["conservation-monitor", "gl9-holonomy", "hebbian-coupling", "fault-detect"],
+      "dependencies": ["fleet-math"]
+    },
+    "fleet-reason": {
+      "description": "Reasoning rooms — activation keys, labeled paradox, stage routing, expert daemons",
+      "rooms": ["activation-keys", "labeled-paradox", "stage-router", "expert-daemon"],
+      "dependencies": []
+    },
+    "fleet-comm": {
+      "description": "Communication rooms — I2I protocol, Matrix bridge, PLATO sync, Cashew bridge",
+      "rooms": ["i2i-protocol", "matrix-bridge", "plato-sync", "cashew-bridge"],
+      "dependencies": []
+    }
+  },
+  "version": "1.0.0"
+}

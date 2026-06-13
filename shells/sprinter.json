@@ -1,0 +1,13 @@
+{
+  "name": "sprinter",
+  "description": "Fast routing shell — optimized for quick lookups and tier routing.",
+  "initial_state": {
+    "role": "fast-routing",
+    "preferred_model": "glm-4.7-flash"
+  },
+  "defaults": {
+    "max_tiles": 5000,
+    "session_timeout": 1800,
+    "auto_load": ["fleet-translate", "fleet-reason"]
+  }
+}

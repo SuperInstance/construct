@@ -1,0 +1,27 @@
+{
+  "name": "medical",
+  "description": "Diagnostic reasoning training — systematic differential diagnosis under uncertainty.",
+  "duration_days": 2000,
+  "difficulty": "hard",
+  "skills_granted": ["differential-diagnosis", "bayesian-updating", "sensitivity-analysis", "red-flag-detection"],
+  "modules": [
+    {
+      "topic": "Differential Diagnosis",
+      "domain": "medical",
+      "content": "Start broad, narrow fast. List all plausible conditions. Rank by probability given presentation. Order tests that discriminate between top differentials. Update priors with each result.",
+      "confidence": 0.93
+    },
+    {
+      "topic": "Bayesian Reasoning",
+      "domain": "medical",
+      "content": "Prevalence is the prior. Test sensitivity and specificity give likelihood ratios. Posterior = prior × LR+ / normalization. A positive test on a rare disease still has high false-positive rate — always compute PPV.",
+      "confidence": 0.91
+    },
+    {
+      "topic": "Red Flags",
+      "domain": "medical",
+      "content": "Symptoms that demand immediate action: sudden severe headache (SAH), chest pain with diaphoresis (MI), unilateral weakness (stroke), fever with neck stiffness (meningitis). These bypass differential — act first.",
+      "confidence": 0.95
+    }
+  ]
+}
